@@ -14,8 +14,11 @@ render() {
   return (
     <div className="App">
       {
-        this.todoList.map((item, index)=>
+        this.todoList.length>0 && this.todoList.map((item, index)=>
          <TodoItem key={index} item={item} />)
+      }
+      {
+        this.todoList.length === 0 && "Nothing here"
       }
     </div>
   );
